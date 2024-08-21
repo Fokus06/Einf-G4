@@ -1,7 +1,7 @@
 array = [5, 34, 3, 12, 4, 2, 9, 23]
-zsum = 110
+zsum = 9
 nsel = []
-
+result = []
 
 for i in range(0,len(array)):
     az = array[i]
@@ -14,8 +14,9 @@ while ksum != zsum:
             ksum += nsel[i]
         elif nsel[i] + ksum == zsum:
             ksum += nsel[i]
-            print("fertig", ksum)
+            print("fertig", result, ksum)
             exit(0)
+    #result.append(nsel[0])
     nsel.remove(nsel[0])
     ksum = 0
 
